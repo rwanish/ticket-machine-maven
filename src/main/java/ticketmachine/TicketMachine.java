@@ -82,6 +82,9 @@ public class TicketMachine {
 	 * @return vrai si le ticket a été imprimé, faux sinon
 	 */
 	public boolean printTicket() {
+		if (balance < price) {
+			return false;
+		}
 		// Simulate the printing of a ticket.
 		System.out.println("##################");
 		System.out.println("# The BlueJ Line");
